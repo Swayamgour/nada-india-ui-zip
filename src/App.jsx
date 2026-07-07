@@ -203,6 +203,7 @@ export default function App() {
     <>
       {/* ===== HEADER ===== */}
       <header className="header">
+        
         <div className="header__top">
           <div className="container header__top-inner">
             <p className="header__gov">
@@ -223,7 +224,7 @@ export default function App() {
             <span className="header__brand-sub">National Anti-Doping<br />Agency, India</span> */}
 
             <img src={logo} alt="NADA Logo" width="200" />
-            
+
           </a>
 
           <nav className="header__nav header__nav--desktop" aria-label="Primary">
