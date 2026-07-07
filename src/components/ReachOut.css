@@ -1,0 +1,49 @@
+.reach-out {
+  background: var(--slate-100);
+}
+
+.reach-out__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.reach-out__card {
+  background: var(--paper-raised);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border-top: 3px solid var(--green-clear);
+}
+
+.reach-out__icon {
+  color: var(--green-clear);
+}
+
+.reach-out__title {
+  font-size: 1.1rem;
+}
+
+.reach-out__desc {
+  color: var(--slate);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.reach-out__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ink);
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 860px) {
+  .reach-out__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,65 @@
+.engage {
+  background: var(--ink);
+  color: #fff;
+}
+
+.eyebrow--onink {
+  color: var(--saffron);
+}
+
+.engage__heading {
+  color: #fff;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  margin-top: 0.6rem;
+}
+
+.engage__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.engage__card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  padding: 1.9rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  color: #fff;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.engage__card:hover {
+  border-color: var(--saffron);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.engage__card svg {
+  color: var(--saffron);
+}
+
+.engage__card h3 {
+  font-size: 1.05rem;
+}
+
+.engage__card p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.engage__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+@media (max-width: 860px) {
+  .engage__grid {
+    grid-template-columns: 1fr;
+  }
+}

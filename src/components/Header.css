@@ -1,0 +1,164 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--paper-raised);
+}
+
+.header__top {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.header__top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem var(--gutter);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.header__gov {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.header__lang {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header__lang a {
+  opacity: 0.7;
+}
+.header__lang a[aria-current='true'] {
+  opacity: 1;
+  color: var(--saffron);
+}
+
+.header__main {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.9rem var(--gutter);
+}
+
+.header__brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  flex-shrink: 0;
+}
+
+.header__brand-mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+
+.header__brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  line-height: 1.35;
+  color: var(--slate);
+  letter-spacing: 0.02em;
+}
+
+.header__nav--desktop {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  flex: 1;
+  justify-content: center;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.header__nav--desktop a {
+  position: relative;
+  padding: 0.3rem 0;
+  color: var(--ink);
+}
+
+.header__nav--desktop a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--saffron);
+  transition: width 0.2s ease;
+}
+
+.header__nav--desktop a:hover::after {
+  width: 100%;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.header__search {
+  background: none;
+  border: none;
+  color: var(--ink);
+  padding: 0.5rem;
+  display: flex;
+}
+
+.header__report {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.82rem;
+}
+
+.header__burger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--ink);
+}
+
+.header__nav--mobile {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .header__nav--desktop,
+  .header__report {
+    display: none;
+  }
+  .header__burger {
+    display: flex;
+  }
+  .header__nav--mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem var(--gutter) 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+  .header__nav--mobile a {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--line);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .header__top-inner {
+    font-size: 0.62rem;
+  }
+  .header__gov span {
+    display: none;
+  }
+}

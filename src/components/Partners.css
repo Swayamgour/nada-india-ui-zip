@@ -1,0 +1,23 @@
+.partners {
+  padding: 2.75rem 0;
+  background: var(--paper-raised);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.partners__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.1rem;
+}
+
+.partners__badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--slate);
+  letter-spacing: 0.01em;
+}
